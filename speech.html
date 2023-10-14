@@ -27,6 +27,8 @@
 
         // 옵션을 채운다.
         window.speechSynthesis.onvoiceschanged = function () {
+            document.getElementById("voiceSelect").options.length = 0;
+
             voices = speechSynthesis.getVoices();
 
             for (let i = 0; i < voices.length; i++) {
